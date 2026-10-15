@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- QR Max "Laser Eye": a QR finder square with a scan laser. Artwork stays inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M32,32h44v44H32z M41,41v26h26V41z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,47h14v14H47z" />
+    <path
+        android:fillColor="#26FF5A4D"
+        android:pathData="M30,49h48a6,6 0 0 1 0,12h-48a6,6 0 0 1 0,-12z" />
+    <path
+        android:fillColor="#40FF5A4D"
+        android:pathData="M27.5,51.5h53a3.5,3.5 0 0 1 0,7h-53a3.5,3.5 0 0 1 0,-7z" />
+    <path android:pathData="M24,53h60v4H24z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="24"
+                android:startY="55"
+                android:endX="84"
+                android:endY="55"
+                android:type="linear">
+                <item android:color="#00FF5A4D" android:offset="0.0" />
+                <item android:color="#FFFF5A4D" android:offset="0.2" />
+                <item android:color="#FFFF5A4D" android:offset="0.8" />
+                <item android:color="#00FF5A4D" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <defs>
+    <linearGradient id="laser" x1="24" y1="0" x2="84" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff5a4d" stop-opacity="0"/><stop offset=".2" stop-color="#ff5a4d"/>
+      <stop offset=".8" stop-color="#ff5a4d"/><stop offset="1" stop-color="#ff5a4d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" fill="#0e1626"/>
+  <path fill="#fff" fill-rule="evenodd" d="M32 32h44v44H32zM41 41v26h26V41z"/>
+  <rect x="47" y="47" width="14" height="14" fill="#fff"/>
+  <rect x="24" y="49" width="60" height="12" rx="6" fill="#ff5a4d" opacity=".15"/>
+  <rect x="24" y="51.500" width="60" height="7" rx="3.500" fill="#ff5a4d" opacity=".25"/>
+  <rect x="24" y="53" width="60" height="4" fill="url(#laser)"/>
+</svg>

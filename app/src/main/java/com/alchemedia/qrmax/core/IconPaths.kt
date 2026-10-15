@@ -1,0 +1,48 @@
+package com.alchemedia.qrmax.core
+
+/** 24x24 stroke icons, shared by the UI and by symbol logos drawn inside codes. */
+object IconPaths {
+    val map: Map<String, String> = mapOf(
+        "link" to "M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1",
+        "text" to "M5 6h14M12 6v13M9 19h6",
+        "wifi" to "M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.7 16a6 6 0 0 1 6.6 0M12 19.5h.01",
+        "user" to "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0",
+        "sms" to "M4 5h16v11H9l-5 4z",
+        "mail" to "M3 6h18v12H3zM3 7l9 7 9-7",
+        "phone" to "M6 3h3l2 5-2 1.5a11 11 0 0 0 5.5 5.5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z",
+        "calendar" to "M4 6h16v14H4zM4 10h16M8 3v4M16 3v4",
+        "pin" to "M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21zM12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z",
+        "barcode" to "M4 5v14M7 5v14M11 5v14M14 5v14M17 5v14M20 5v14",
+        "copy" to "M9 9h10v11H9zM5 15V4h10",
+        "share" to "M12 15V3M8 7l4-4 4 4M5 12v8h14v-8",
+        "x" to "M6 6l12 12M18 6L6 18",
+        "trash" to "M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13",
+        "ext" to "M14 4h6v6M20 4l-9 9M18 14v6H4V6h6",
+        "bookmark" to "M6 4h12v17l-6-4-6 4z",
+        "download" to "M12 4v11M8 11l4 4 4-4M5 20h14",
+        "image" to "M4 5h16v14H4zM4 16l5-5 4 4 3-3 4 4M9 9h.01",
+        "back" to "M15 5l-7 7 7 7",
+        "edit" to "M4 20h4L19 9l-4-4L4 16zM13 7l4 4",
+        "dots" to "M5 12h.01M12 12h.01M19 12h.01",
+        "star" to "M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z",
+        "heart" to "M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z",
+        "bolt" to "M13 3L5 14h6l-1 7 8-11h-6z",
+        "home" to "M4 11l8-7 8 7M6 10v10h12V10",
+        "bell" to "M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0",
+        "menu" to "M4 7h16M4 12h16M4 17h16",
+        "scan" to "M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16",
+        "palette" to "M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1.1.9-2 2-2H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8zM7.5 11.5h.01M10 7.5h.01M14.5 7.5h.01",
+        "shapes" to "M4 4h7v7H4zM17.5 13.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM17 4l3.5 6h-7z",
+        "frame" to "M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M9 9h6v6H9z",
+        "lock" to "M7 11V8a5 5 0 0 1 10 0v3M6 11h12v9H6z",
+        "check" to "M5 12.5l4.5 4.5L19 7.5",
+        "globe" to "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z",
+        "crown" to "M4 18h16M5 18l-1-9 4.5 4L12 6l3.5 7L20 9l-1 9",
+        "chevron" to "M6 9l6 6 6-6",
+        "torch" to "M13 3L5 14h6l-1 7 8-11h-6z",
+        "search" to "M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4",
+        "history" to "M12 7v5l3 2M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5M3.5 4v4.5H8",
+        "create" to "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z",
+    )
+    val logoChoices = listOf("link", "wifi", "pin", "mail", "phone", "user", "bell", "menu", "scan", "heart", "star", "home", "calendar", "bookmark", "bolt", "share")
+}
