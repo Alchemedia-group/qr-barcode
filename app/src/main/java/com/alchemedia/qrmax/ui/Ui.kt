@@ -90,6 +90,16 @@ fun SurfaceCard(modifier: Modifier = Modifier, pad: Dp = 16.dp, content: @Compos
     Column(modifier.fillMaxWidth().clip(RoundedCornerShape(24.dp)).background(q.surface).border(BorderStroke(1.dp, q.line.copy(alpha = .6f)), RoundedCornerShape(24.dp)).padding(pad), verticalArrangement = Arrangement.spacedBy(14.dp), content = content)
 }
 
+/** Icon-only button; [description] is the localized label read out by screen readers. */
+@Composable
+fun IconActionButton(icon: String, description: String, onClick: () -> Unit, modifier: Modifier = Modifier, ghost: Boolean = false) {
+    Box(
+        modifier.height(48.dp).clip(RoundedCornerShape(14.dp)).background(if (ghost) q.surface2 else q.accent)
+            .clickable(role = Role.Button, onClick = onClick).semantics { contentDescription = description },
+        contentAlignment = Alignment.Center,
+    ) { Ico(icon, tint = if (ghost) q.ink else q.accentInk, size = 24.dp) }
+}
+
 @Composable
 fun AppButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, icon: String? = null, ghost: Boolean = false, enabled: Boolean = true, compact: Boolean = false, danger: Boolean = false) {
     val bg = if (ghost) q.surface2 else q.accent

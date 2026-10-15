@@ -144,7 +144,7 @@ fun ScanScreen(vm: AppViewModel) {
             Row(Modifier.align(Alignment.CenterHorizontally).clip(RoundedCornerShape(50)).background(Color.White.copy(alpha = .14f)).clickable(role = Role.Button) { pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) }.padding(horizontal = 18.dp, vertical = 11.dp), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                 Ico("image", tint = Color.White, size = 20.dp); Text(stringResource(R.string.from_picture), color = Color.White, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
             }
-            Box(Modifier.size(96.dp))
+            Box(Modifier.size(124.dp))
         }
     }
 }

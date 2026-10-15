@@ -75,11 +75,11 @@ internal fun TabBar(vm: AppViewModel, modifier: Modifier) {
             Box(Modifier.width(84.dp))
             SideTab(Modifier.weight(1f), "history", R.string.tab_history, vm.tab == Tab.History) { vm.tab = Tab.History }
         }
-        Column(Modifier.align(Alignment.TopCenter).offset(y = (-14).dp), horizontalAlignment = Alignment.CenterHorizontally) {
-            Box(Modifier.size(70.dp).shadow(12.dp, CircleShape, spotColor = q.accent).clip(CircleShape).border(6.dp, q.bg, CircleShape).background(Brush.linearGradient(listOf(Color.White.copy(alpha = .25f).compositeOverCompat(q.accent), q.accent)))
+        Column(Modifier.align(Alignment.TopCenter).offset(y = (-34).dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Box(Modifier.size(64.dp).shadow(12.dp, CircleShape, spotColor = q.accent).clip(CircleShape).border(6.dp, q.bg, CircleShape).background(Brush.linearGradient(listOf(Color.White.copy(alpha = .25f).compositeOverCompat(q.accent), q.accent)))
                 .clickable(role = Role.Tab) { if (vm.tab == Tab.Scan) vm.resetScan() else vm.tab = Tab.Scan }.semantics { contentDescription = "" }, contentAlignment = Alignment.Center) { Ico("scan", tint = q.accentInk, size = 30.dp) }
         }
-        Text(stringResource(R.string.tab_scan), Modifier.align(Alignment.BottomCenter).padding(bottom = 7.dp), color = if (vm.tab == Tab.Scan) q.accent else q.muted, fontWeight = FontWeight.Bold, fontSize = 11.5.sp)
+        Text(stringResource(R.string.tab_scan), Modifier.align(Alignment.BottomCenter).padding(bottom = 12.dp), color = if (vm.tab == Tab.Scan) q.accent else q.muted, fontWeight = FontWeight.Bold, fontSize = 11.5.sp)
     }
 }
 
@@ -97,7 +97,7 @@ private fun SideTab(modifier: Modifier, icon: String, label: Int, on: Boolean, o
 private fun ToastHost(vm: AppViewModel, modifier: Modifier) {
     val t = vm.toast
     LaunchedEffect(t?.id) { if (t != null) { delay(if (t.action != null) 5200 else 2800); if (vm.toast?.id == t.id) vm.toast = null } }
-    Box(modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 18.dp).padding(bottom = 100.dp)) {
+    Box(modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 18.dp).padding(bottom = 124.dp)) {
         AnimatedVisibility(t != null, enter = fadeIn() + slideInVertically { it / 2 }, exit = fadeOut() + slideOutVertically { it / 2 }) {
             val shown = remember(t?.id) { t }
             if (shown != null) Row(Modifier.fillMaxWidth().shadow(12.dp, RoundedCornerShape(16.dp)).clip(RoundedCornerShape(16.dp)).background(q.ink).padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {

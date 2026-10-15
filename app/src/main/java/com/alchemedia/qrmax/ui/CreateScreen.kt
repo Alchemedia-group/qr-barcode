@@ -101,8 +101,8 @@ private fun PreviewBand(vm: AppViewModel) {
             }
             Text(o?.error ?: o?.info ?: "", color = if (o?.error != null) q.danger else q.muted, fontSize = 12.sp, maxLines = 2)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                AppButton(stringResource(R.string.share), { if (raw.isEmpty() || o?.bitmap == null) vm.showToast(R.string.fill_first) else vm.sheet = SheetKind.Share(raw, fmt, st, vm.cName.ifEmpty { "QR Max" }, null) }, Modifier.weight(1f), icon = "share", compact = true)
-                AppButton(stringResource(R.string.save), { if (raw.isEmpty() || o?.bitmap == null) vm.showToast(R.string.fill_first) else vm.sheet = SheetKind.Save }, Modifier.weight(1f), icon = "bookmark", ghost = true, compact = true)
+                IconActionButton("share", stringResource(R.string.share), { if (raw.isEmpty() || o?.bitmap == null) vm.showToast(R.string.fill_first) else vm.sheet = SheetKind.Share(raw, fmt, st, vm.cName.ifEmpty { "QR Max" }, null) }, Modifier.weight(1f))
+                IconActionButton("bookmark", stringResource(R.string.save), { if (raw.isEmpty() || o?.bitmap == null) vm.showToast(R.string.fill_first) else vm.sheet = SheetKind.Save }, Modifier.weight(1f), ghost = true)
             }
         }
     }
